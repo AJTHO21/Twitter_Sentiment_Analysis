@@ -1,0 +1,64 @@
+# Data paths
+data:
+  train_path: "data/raw/twitter_training.csv"
+  val_path: "data/raw/twitter_validation.csv"
+  processed_dir: "data/processed"
+
+# Model parameters
+model:
+  type: "transformer"  # Options: transformer, lstm, cnn
+  transformer:
+    model_name: "bert-base-uncased"
+    max_length: 128
+    batch_size: 32
+    learning_rate: 2e-5
+    num_epochs: 3
+    warmup_steps: 500
+    weight_decay: 0.01
+  lstm:
+    embedding_dim: 300
+    hidden_dim: 256
+    num_layers: 2
+    dropout: 0.5
+    batch_size: 64
+    learning_rate: 0.001
+    num_epochs: 10
+  cnn:
+    embedding_dim: 300
+    num_filters: 100
+    filter_sizes: [3, 4, 5]
+    dropout: 0.5
+    batch_size: 64
+    learning_rate: 0.001
+    num_epochs: 10
+
+# Training parameters
+training:
+  random_seed: 42
+  num_workers: 4
+  device: "cuda"  # Options: cuda, cpu
+  early_stopping_patience: 3
+  gradient_clipping: 1.0
+
+# Evaluation parameters
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+  confusion_matrix: true
+  classification_report: true
+
+# Output paths
+output:
+  base_dir: "outputs"
+  model_dir: "models"
+  plots_dir: "plots"
+  reports_dir: "reports"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/training.log" 
