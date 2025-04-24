@@ -253,9 +253,27 @@ Twitter_Sentiment_Analysis/
 
 ### Training Metrics
 
-### Model Performance Visualization
+### Training Progress
+![Training Loss](data/analysis/fine_tuned/training_loss.png)
+*Figure 1: Training loss over 45 epochs showing consistent improvement in model performance*
+
+![Learning Rate Schedule](data/analysis/fine_tuned/lr_schedule.png)
+*Figure 2: Cosine learning rate schedule with restarts, helping avoid local minima*
+
+### Data Distribution
+![Class Distribution](data/analysis/fine_tuned/class_distribution.png)
+*Figure 3: Class distribution before and after balanced sampling*
+
+### Feature Analysis
+![Feature Importance](data/analysis/fine_tuned/feature_importance.png)
+*Figure 4: Relative importance of different features in sentiment classification*
+
+### Model Performance
 ![Confusion Matrix - Ensemble](data/analysis/fine_tuned/confusion_matrix_ensemble.png)
+*Figure 5: Confusion matrix showing the performance of the ensemble model*
+
 ![Confusion Matrix - Fine Tuned](data/analysis/fine_tuned/confusion_matrix_fine_tuned.png)
+*Figure 6: Confusion matrix for the fine-tuned model*
 
 ### Performance Reports
 ```
