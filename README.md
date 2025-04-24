@@ -252,10 +252,18 @@ Twitter_Sentiment_Analysis/
    ```
 
 ### Training Metrics
-![Training Loss](data/analysis/fine_tuned/training_loss.png)
-![Learning Rate Schedule](data/analysis/fine_tuned/lr_schedule.png)
-![Class Distribution](data/analysis/fine_tuned/class_distribution.png)
-![Feature Importance](data/analysis/fine_tuned/feature_importance.png)
+
+### Model Performance Visualization
+![Confusion Matrix - Ensemble](data/analysis/fine_tuned/confusion_matrix_ensemble.png)
+![Confusion Matrix - Fine Tuned](data/analysis/fine_tuned/confusion_matrix_fine_tuned.png)
+
+### Performance Reports
+```
+Classification Report (Negative vs Neutral):
+              precision    recall  f1-score   support
+   Negative       0.78      0.70      0.74        30
+    Neutral       0.73      0.80      0.76        30
+```
 
 ### Iteration Results
 1. **First Iteration (Basic RoBERTa)**
